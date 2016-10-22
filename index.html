@@ -11,6 +11,10 @@
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>
     <button class="forward">forward</button>
+    <button class="backward">backward</button>
+    <button class="left">left</button>
+    <button class="right">right</button>
+    <button class="longJump">longJump</button>
   </body>
 
   <!-- <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script> -->
@@ -20,6 +24,10 @@
     var sumo = require('./test.js');
     console.log(sumo);
     global.$ = require('jquery');
-    $('.forward').on('click', sumo.test);
+    $('.forward').on('click', sumo.forward);
+    $('.backward').on('click', sumo.backward);
+    $('.left').on('click', sumo.left);
+    $('.right').on('click', sumo.right);
+    $('.longJump').on('click', sumo.longJump);
   </script>
 </html>
